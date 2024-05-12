@@ -13,7 +13,7 @@ export default function Home() {
           <p></p>
           <p className="text-neutral-500 max-w-lg mx-auto my-2 text-sm text-center relative z-10">
             A place for web designers, scratch enjoyers, ThinkPad owners, Unity
-            wizards, and enthousiats of all types to connect, iterate, and
+            wizards, and enthusiasts of all types to connect, iterate, and
             build.
           </p>
 
