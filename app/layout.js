@@ -11,30 +11,30 @@ export const metadata = {
   metadataBase: new URL(
     `${
       process.env.NODE_ENV === "production"
-        ? "https://mythosbot.com"
+        ? "https://lhs-lcsa-web.vercel.app/"
         : "http://localhost:3000"
     }`
   ),
   description:
     "The official website of Lincoln's one and only Computer Science Association. ",
-  color: "magenta",
+  color: "rose",
   openGraph: {
     title: "Lincoln Computer Science Association",
     description:
       "The official website of Lincoln's one and only Computer Science Association. ",
     type: "website",
-    images: "/images/mythos-socialcard.png",
+    images: "/social-card.png",
   },
   twitter: {
     card: "summary_large_image",
     title: "Lincoln Computer Science Association",
     description:
       "The official website of Lincoln's one and only Computer Science Association. ",
-    images: ["/images/mythos-socialcard.png"],
+    images: ["/social-card.png"],
   },
   icons: {
-    icon: "/images/favicon.svg",
-    shortcut: "/images/favicon.svg",
+    icon: "/logo.svg",
+    shortcut: "/logo.svg",
   },
 };
 
