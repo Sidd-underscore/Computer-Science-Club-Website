@@ -103,7 +103,7 @@ function Education() {
       initial="initial"
       animate="animate"
       whileHover="hover"
-      className="md:flex md:flex-1 space-y-2 w-full h-full min-h-[12rem] flex-row space-x-2 p-2"
+      className="md:flex md:flex-1 space-y-2 w-full h-full min-h-[12rem] flex-row space-x-2 md:space-y-0 p-2"
     >
       <motion.div
         variants={first}
