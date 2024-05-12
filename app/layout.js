@@ -42,7 +42,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${GeistSans.className} bg-neutral-50 dark:bg-neutral-900`}
+        className={`${GeistSans.className} bg-neutral-200 dark:bg-neutral-950`}
       >
         <ThemeProvider
           attribute="class"
