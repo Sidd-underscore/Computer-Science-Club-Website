@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 export function Loading({ className, ...props }) {
   return (
     <svg
-      className={cn("dark:text-neutral-800 animate-spin", className)}
+      className={cn("text-neutral-100 dark:text-neutral-800 animate-spin", className)}
       viewBox="0 0 64 64"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -24,7 +24,7 @@ export function Loading({ className, ...props }) {
         strokeWidth="5"
         strokeLinecap="round"
         strokeLinejoin="round"
-        className="text-neutral-600"
+        className="text-neutral-300 dark:text-neutral-600"
       ></path>
     </svg>
   );
