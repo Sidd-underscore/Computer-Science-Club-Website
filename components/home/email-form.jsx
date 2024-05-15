@@ -30,6 +30,7 @@ export function EmailForm() {
     <div>
       <div className="w-full flex items-center justify-center space-x-2">
         <Input
+          onKeyPress={(e) => e.code == 'Enter' ? submit() : undefined}
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           className="max-w-[24rem]"
@@ -37,8 +38,9 @@ export function EmailForm() {
         />
         <Button
           variant="secondary"
+          disabled={buttonDisabled || email.length < 1}
           className={`aspect-square p-0.5 transition ${
-            buttonDisabled ? "opacity-50 cursor-not-allowed" : undefined
+            buttonDisabled || email.length < 1 ? "opacity-50 cursor-not-allowed" : undefined
           }`}
           onClick={() => !buttonDisabled && submit()}
         >
