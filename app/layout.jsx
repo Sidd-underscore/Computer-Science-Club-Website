@@ -2,6 +2,7 @@ import "./globals.css";
 import { GeistSans } from "geist/font/sans";
 import { ThemeProvider } from "@/components/ui/theme-provider";
 import { ThemeSwitcher } from "@/components/ui/theme-switcher";
+import { Navbar } from "@/components/ui/navbar";
 
 export const metadata = {
   title: {
@@ -50,7 +51,7 @@ export default function RootLayout({ children }) {
           enableSystem
           disableTransitionOnChange
         >
-          <ThemeSwitcher className="absolute top-4 right-4 z-20" />
+          <Navbar />
 
           <main>{children}</main>
         </ThemeProvider>

@@ -40,7 +40,7 @@ export function EmailForm() {
           variant="secondary"
           disabled={buttonDisabled || email.length < 1}
           className={`aspect-square p-0.5 transition ${
-            buttonDisabled || email.length < 1 ? "opacity-50 cursor-not-allowed" : undefined
+            buttonDisabled || email.length < 1 ? "text-opacity-50 cursor-not-allowed" : undefined
           }`}
           onClick={() => !buttonDisabled && submit()}
         >
