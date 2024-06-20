@@ -26,13 +26,13 @@ export function ThemeSwitcher({className}) {
       </DropdownMenuTrigger>
       <DropdownMenuContent sideOffset={14} className="rounded-xl" align="end">
         <DropdownMenuItem className="rounded-lg" onClick={() => setTheme("light")}>
-          Light
+          <code className="mr-2">:(</code> {" "} light
         </DropdownMenuItem>
         <DropdownMenuItem className="rounded-lg" onClick={() => setTheme("dark")}>
-          Dark
+          <code className="mr-2">:)</code> {" "} dark 
         </DropdownMenuItem>
         <DropdownMenuItem className="rounded-lg" onClick={() => setTheme("system")}>
-          System
+          <code className="mr-2">:/</code> {" "} system
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
