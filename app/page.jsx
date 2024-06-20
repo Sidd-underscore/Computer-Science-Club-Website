@@ -15,7 +15,7 @@ export default function Home() {
           <p className="text-neutral-500 max-w-lg mx-auto my-2 text-sm text-center relative z-10">
             A place for web designers, scratch enjoyers, ThinkPad owners, Unity
             wizards, and enthusiasts of all types to connect, iterate, and
-            build. <Link href="/about" className="underline transition hover:text-pink-400 dark:hover:text-pink-300">Learn more!</Link>
+            build. We use Arch, btw. <Link href="/about" className="underline transition hover:text-pink-400 dark:hover:text-pink-300">Learn more!</Link>
           </p>
 
           <div className="py-10">
