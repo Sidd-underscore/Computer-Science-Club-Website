@@ -1,3 +1,4 @@
+import Image from "next/image";
 export default function AboutPage() {
   return (
     <div className="relative h-screen w-screen">
@@ -15,11 +16,11 @@ export default function AboutPage() {
           </p>
 
           <p className="mt-10 text-center">
-            We meet (mostly) all flex days in the computer lab, <code>207</code>. Feel free
-            to bring your friends and hop in to see if we&apos;re there!
-            However, if you want a more reliable way of knowing when and where
-            we&apos;re meeting, enter your email in the home page to access an
-            invite to the Discord server!
+            We meet (mostly) all flex days in the computer lab, <code>207</code>
+            . Feel free to bring your friends and hop in to see if we&apos;re
+            there! However, if you want a more reliable way of knowing when and
+            where we&apos;re meeting, enter your email in the home page to
+            access an invite to the Discord server!
           </p>
 
           <p className="mt-10 text-center">
@@ -31,12 +32,21 @@ export default function AboutPage() {
           </p>
 
           <p className="mt-10 text-center">
-            If you have any questions, the Discod server is also the place to go :) We would love hearing any feedback you might have!
+            If you have any questions, the Discod server is also the place to go
+            :) We would love hearing any feedback you might have!
           </p>
 
-          <h3 className="relative z-10 mt-20 bg-gradient-to-br opacity-75 from-indigo-400 to-pink-400 bg-clip-text text-center text-xl font-bold text-transparent md:text-2xl">
-            Welcome to LCSA!
+          <h3 className="relative z-10 mt-10 mb-5 bg-gradient-to-br from-indigo-400 to-pink-400 bg-clip-text text-center text-xl font-bold text-transparent opacity-75 md:text-2xl">
+            Welcome to LCSA! <br />
+            And Glory to Tinling!
           </h3>
+          <Image
+            className="w-full h-40"
+            src="/tinling.png"
+            alt="Tinling"
+            width={1000}
+            height={1000}
+          />
         </div>
       </div>
     </div>
