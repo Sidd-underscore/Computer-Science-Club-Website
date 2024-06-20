@@ -6,10 +6,10 @@ export function Navbar() {
     <div className="fixed top-4 z-20 flex w-screen justify-center">
       <nav className="group flex w-[768px] items-center justify-between rounded-full border border-neutral-400/50 bg-neutral-100/50 px-4 py-2.5 text-sm shadow-md backdrop-blur-md dark:border-neutral-700/50 dark:bg-neutral-900/50">
         <Link
-          href="/competitions"
+          href="/about"
           className="z-3 text-neutral-600 transition hover:!text-neutral-700 group-hover:text-neutral-600 hover:dark:!text-neutral-300 dark:group-hover:text-neutral-500"
         >
-          competitions
+          about
         </Link>
         <div className="absolute z-[-1] -mx-4 -my-2.5 flex w-full items-center justify-center">
           <Link

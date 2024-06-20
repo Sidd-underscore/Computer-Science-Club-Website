@@ -1,6 +1,3 @@
-import { EmailForm } from "@/components/home/email-form";
-import { HomeGrid } from "@/components/home/grid";
-
 export default function Competitions() {
   return (
     <div className="w-screen h-screen relative">

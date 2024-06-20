@@ -11,7 +11,7 @@ export function EmailForm() {
   const [email, setEmail] = useState("");
   const [buttonDisabled, setButtonDisabled] = useState(false);
   const [submissionSuccessful, setSubmissionSuccessful] = useState(
-    "not defined but it must be not boolean on initial load"
+    "not defined but it must be not boolean on initial load hence we make it string"
   );
 
   async function submit() {
@@ -30,7 +30,7 @@ export function EmailForm() {
     <div>
       <div className="w-full flex items-center justify-center space-x-2">
         <Input
-          onKeyPress={(e) => e.code == 'Enter' ? submit() : undefined}
+          onKeyUp={(e) => e.code == 'Enter' ? submit() : undefined}
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           className="max-w-[24rem]"
