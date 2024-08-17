@@ -1,9 +1,44 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import { useAnimation } from "framer-motion";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import { ThemeSwitcher } from "@/components/ui/theme-switcher";
 
 export function Navbar() {
+  const [isNavSticky, setIsNavSticky] = useState(false);
+  const controls = useAnimation();
+
+  useEffect(() => {
+    let lastScrollY = window.scrollY;
+  
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+  
+      if (currentScrollY > lastScrollY) {
+        setIsNavSticky(false);
+        controls.start({ top: "-10%" });
+      } else if (currentScrollY < lastScrollY) {
+        setIsNavSticky(true);
+        controls.start({ top: 0 });
+      }
+  
+      lastScrollY = currentScrollY;
+    };
+  
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [controls]);
+  
+
   return (
-    <div className="fixed md:top-4 z-20 flex w-screen justify-center">
+    <motion.div
+    className={`sticky z-20 md:top-4 flex w-screen justify-center pt-4`}
+    initial={{ top: "-10%" }}
+    animate={controls}
+    transition={{ type: "spring", duration: 0.5, bounce: 0.25 }}
+  >
       <nav className="flex w-full max-w-4xl items-center justify-between border-2 border-neutral-200 bg-neutral-50 text-sm backdrop-blur-md dark:border-neutral-800 dark:bg-neutral-900">
         <Link
           href="/about"
@@ -17,6 +52,7 @@ export function Navbar() {
           />
         <ThemeSwitcher className="!bg-transparent dark:!bg-transparent border-none text-neutral-600 hover:text-neutral-600 dark:hover:text-neutral-500 hover:dark:!text-neutral-300" />
       </nav>
-    </div>
+  </motion.div>
+    
   );
 }
