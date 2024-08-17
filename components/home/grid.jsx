@@ -20,7 +20,7 @@ import {
 import { motion } from "framer-motion";
 
 const Skeleton = () => (
-  <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-bl from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100"></div>
+  <div className="flex h-full min-h-[6rem] w-full flex-1 bg-gradient-to-bl from-neutral-200 to-neutral-100 dark:from-neutral-900 dark:to-neutral-800" />
 );
 
 function OpenCollaboration() {
@@ -53,25 +53,25 @@ function OpenCollaboration() {
     <motion.div
       initial="initial"
       whileHover="animate"
-      className="flex w-full h-full min-h-[6rem] flex-col space-y-2 p-2"
+      className="flex h-full w-full flex-col space-y-2"
     >
       <motion.div
         variants={variants}
-        className="flex rounded-2xl items-start border border-neutral-100 dark:border-neutral-700/50 p-1.5 space-x-2 bg-neutral-50 dark:bg-neutral-800/10 backdrop-blur-sm"
+        className="z-10 flex items-start space-x-2 border border-neutral-100 bg-neutral-50 p-1.5 backdrop-blur-sm dark:border-neutral-700/50 dark:bg-neutral-800/10"
       >
-        <PersonIcon className="w-6 h-6 p-1 flex-shrink-0 text-neutral-400 bg-neutral-100 dark:bg-neutral-700 rounded-full" />
+        <PersonIcon className="h-5 w-5 flex-shrink-0 p-0.5 text-neutral-400" />
         <p className="text-xs text-neutral-500">
           how would you improve this code? I added comments but...
         </p>
       </motion.div>
       <motion.div
         variants={variantsSecond}
-        className="flex rounded-2xl items-center justify-end ml-auto border w-fit max-w-3/4 border-neutral-100 dark:border-neutral-700/50 p-1.5 space-x-2 bg-white dark:bg-neutral-700/10 backdrop-blur-sm"
+        className="max-w-3/4 z-10 ml-auto flex w-fit items-center justify-end space-x-2 border border-neutral-100 bg-white p-1.5 backdrop-blur-sm dark:border-neutral-700/50 dark:bg-neutral-700/10"
       >
-        <p className="text-xs text-right text-neutral-500">
+        <p className="text-right text-xs text-neutral-500">
           lgtm! maybe add a different variable...
         </p>
-        <div className="h-6 w-6 rounded-full bg-gradient-to-br from-rose-500 to-indigo-500 flex-shrink-0" />
+        <div className="h-4 w-4 flex-shrink-0 bg-gradient-to-br from-rose-500 to-indigo-500" />
       </motion.div>
     </motion.div>
   );
@@ -103,44 +103,44 @@ function Education() {
       initial="initial"
       animate="animate"
       whileHover="hover"
-      className="md:flex md:flex-1 space-y-2 w-full h-full min-h-[12rem] flex-row space-x-2 md:space-y-0 p-2"
+      className="h-[12rem] w-full flex-row space-x-2 space-y-2 p-2 md:flex md:flex-1 md:space-y-0"
     >
       <motion.div
         variants={first}
-        className="md:h-full w-full md:w-1/3 rounded-2xl dark:border-neutral-700/50 bg-neutral-50 p-4 dark:bg-neutral-800/25 backdrop-blur-sm border border-neutral-200 flex flex-col items-center justify-center"
+        className="flex w-full flex-col items-center justify-center border border-neutral-200 bg-neutral-50 p-4 backdrop-blur-sm dark:border-neutral-700/50 dark:bg-neutral-900/50 md:h-full md:w-1/3"
       >
-        <p className="text-neutral-400 text-xs text-center">
+        <p className="text-center text-xs text-neutral-400">
           In 1 week at 01:67 PM
         </p>
-        <p className="font-semibold sm:text-sm text-xs text-center md:text-neutral-400 text-neutral-500 dark:text-neutral-300 mt-4">
+        <p className="mt-4 text-center text-xs font-semibold text-neutral-500 dark:text-neutral-300 sm:text-sm md:text-neutral-400">
           Web Design Fundamentals
         </p>
-        <p className="border border-emerald-400 dark:border-emerald-500 rounded-full px-4 py-1 mt-3 text-xs text-neutral-500 dark:text-white bg-emerald-400/50 dark:bg-emerald-600/50">
+        <p className="mt-3 border border-emerald-400/25 bg-emerald-400/25 px-4 py-1 text-xs text-neutral-500 dark:border-emerald-500 dark:bg-emerald-600/50 dark:text-white">
           Beginner
         </p>
       </motion.div>
-      <motion.div className="md:h-full relative z-20 w-full md:w-1/3 rounded-2xl bg-neutral-100 p-4 dark:bg-neutral-800/50 backdrop-blur-sm dark:border-neutral-700/50 border border-neutral-200 flex flex-col items-center justify-center">
-        <p className="text-neutral-400 text-xs text-center">
+      <motion.div className="relative z-20 flex w-full flex-col items-center justify-center border border-neutral-200 bg-neutral-100 p-4 backdrop-blur-sm dark:border-neutral-700/50 dark:bg-neutral-900/75 md:h-full md:w-1/3">
+        <p className="text-center text-xs text-neutral-400">
           Today at 12:45 AM
         </p>
-        <p className="font-semibold sm:text-sm text-xs text-center text-neutral-500 dark:text-neutral-300 mt-4">
+        <p className="mt-4 text-center text-xs font-semibold text-neutral-500 dark:text-neutral-300 sm:text-sm">
           Algorithms and Sorting
         </p>
-        <p className="border dark:border-yellow-500/75 border-yellow-400/50 rounded-full px-4 py-1 mt-3 text-xs text-neutral-500 dark:text-white bg-yellow-500/30 dark:bg-yellow-600/50">
+        <p className="mt-3 border border-yellow-400/50 bg-yellow-500/30 px-4 py-1 text-xs text-neutral-500 dark:border-yellow-500/75 dark:bg-yellow-600/50 dark:text-white">
           Intermediate
         </p>
       </motion.div>
       <motion.div
         variants={second}
-        className="md:h-full w-full md:w-1/3 rounded-2xl bg-neutral-50 p-4 dark:bg-neutral-800/25 backdrop-blur-sm dark:border-neutral-700/50 border border-neutral-200 flex flex-col items-center justify-center"
+        className="flex w-full flex-col items-center justify-center border border-neutral-200 bg-neutral-50 p-4 backdrop-blur-sm dark:border-neutral-700/50 dark:bg-neutral-900/50 md:h-full md:w-1/3"
       >
-        <p className="text-neutral-400 text-xs text-center">
+        <p className="text-center text-xs text-neutral-400">
           In 2 days at 08:01 AM
         </p>
-        <p className="font-semibold sm:text-sm text-xs text-center md:text-neutral-400 text-neutral-500 dark:text-neutral-300 mt-4">
+        <p className="mt-4 text-center text-xs font-semibold text-neutral-500 dark:text-neutral-300 sm:text-sm md:text-neutral-400">
           Big O Notation Crashcourse
         </p>
-        <p className="border border-red-400/50 dark:border-red-500/50 rounded-full px-4 py-1 mt-3 text-xs text-neutral-500 dark:text-white bg-red-500/30 dark:bg-red-600/30">
+        <p className="mt-3 border border-red-400/25 bg-red-400/25 px-4 py-1 text-xs text-neutral-500 dark:border-red-500/50 dark:bg-red-600/30 dark:text-white">
           Advanced
         </p>
       </motion.div>
@@ -168,7 +168,7 @@ function Diversity() {
         repeatType: "reverse",
       }}
       whileHover="hover"
-      className="flex flex-1 w-full min-h-[6rem] h-full dark:bg-dot-white/[0.2] rounded-lg bg-dot-black/[0.2] flex-col space-y-2"
+      className="flex h-full w-full flex-1 flex-col  space-y-2 bg-dot-black/[0.2] dark:bg-dot-white/[0.2]"
       style={{
         background: "linear-gradient(-45deg,#ee7752,#e73c7e,#23a6d5,#23d5ab)",
         backgroundSize: "400% 400%",
@@ -178,9 +178,9 @@ function Diversity() {
         initial="initial"
         animate="animate"
         variants={variants}
-        className="flex flex-1 w-full h-full dark:bg-dot-white/[0.5] rounded-lg bg-dot-black/[0.2] flex-col space-y-2"
+        className="flex h-full w-full flex-1 flex-col  space-y-2 bg-dot-black/[0.2] dark:bg-dot-white/[0.5]"
       >
-        <motion.div className="h-full w-full rounded-lg"></motion.div>
+        <motion.div className="h-full w-full "></motion.div>
       </motion.div>
     </motion.div>
   );
@@ -216,9 +216,9 @@ function Contests() {
       initial="initial"
       animate="animate"
       whileHover="hover"
-      className="flex flex-1 w-full h-full min-h-[12rem] flex-row space-x-2 p-2"
+      className="flex h-full min-h-[12rem] w-full flex-1 flex-row space-x-2"
     >
-      <Table>
+      <Table className="!overflow-hidden">
         <TableHeader>
           <TableRow className="!text-xs">
             <TableHead>Topic</TableHead>
@@ -226,24 +226,24 @@ function Contests() {
           </TableRow>
         </TableHeader>
 
-        <TableBody>
+        <TableBody className="overflow-hidden">
           <motion.tr
             variants={first}
-            className="transition-colors hover:bg-neutral-100/50 data-[state=selected]:bg-neutral-100 dark:hover:bg-neutral-800/50 dark:data-[state=selected]:bg-neutral-800"
+            className="hover:bg-neutral-100/50 data-[state=selected]:bg-neutral-100 dark:hover:bg-neutral-800/50 dark:data-[state=selected]:bg-neutral-800"
           >
             <TableCell>Leetcode Problems</TableCell>
             <TableCell className="md:hidden">5/11/2024</TableCell>
           </motion.tr>
           <motion.tr
             variants={second}
-            className="transition-colors hover:bg-neutral-100/50 data-[state=selected]:bg-neutral-100 dark:hover:bg-neutral-800/50 dark:data-[state=selected]:bg-neutral-800"
+            className="hover:bg-neutral-100/50 data-[state=selected]:bg-neutral-100 dark:hover:bg-neutral-800/50 dark:data-[state=selected]:bg-neutral-800"
           >
             <TableCell>Hackathon (Secret Theme)</TableCell>
             <TableCell className="md:hidden">11/07/2025</TableCell>
           </motion.tr>
           <motion.tr
             variants={third}
-            className="transition-colors hover:bg-neutral-100/50 data-[state=selected]:bg-neutral-100 dark:hover:bg-neutral-800/50 dark:data-[state=selected]:bg-neutral-800"
+            className="hover:bg-neutral-100/50 data-[state=selected]:bg-neutral-100 dark:hover:bg-neutral-800/50 dark:data-[state=selected]:bg-neutral-800"
           >
             <TableCell>Code and Talk!</TableCell>
             <TableCell className="md:hidden">31/25/2025</TableCell>
@@ -302,17 +302,18 @@ const items = [
 
 export function HomeGrid() {
   return (
-    <BentoGrid className="max-w-4xl mx-auto pb-10">
+    <BentoGrid className="mx-auto max-w-4xl">
       {items.map((item, i) => (
         <BentoGridItem
           key={i}
           title={item.title}
           description={item.description}
           header={item.header}
+          index={i}
           icon={item.icon}
           className={
             (i === 3 || i === 6 ? "md:col-span-2" : "") +
-            " dark:bg-neutral-900/25 dark:border-neutral-800 backdrop-blur-md hover:dark:bg-neutral-900/25 hover:dark:border-neutral-700 h-full"
+            " h-full backdrop-blur-md dark:bg-neutral-900/25 hover:dark:bg-neutral-900/25"
           }
         />
       ))}

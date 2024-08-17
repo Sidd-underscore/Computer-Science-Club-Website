@@ -1,42 +1,47 @@
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils";
 
 export const BentoGrid = ({ className, children }) => {
   return (
     <div
       className={cn(
-        "grid md:auto-rows grid-cols-1 md:grid-cols-3 gap-4 max-w-7xl mx-auto ",
-        className
+        "md:auto-rows mx-auto grid max-w-7xl border-collapse grid-cols-1 border border-neutral-200 dark:border-white/5 md:grid-cols-3",
+        className,
       )}
     >
       {children}
     </div>
-  )
-}
+  );
+};
 
 export const BentoGridItem = ({
   className,
   title,
   description,
   header,
-  icon
+  icon,
+  index,
 }) => {
   return (
     <div
       className={cn(
-        "row-span-1 rounded-xl group/bento hover:shadow-lg transition duration-200 shadow-input dark:shadow-none p-4 dark:bg-black dark:border-white/[0.2] bg-white border border-neutral-300 justify-between flex flex-col space-y-4",
-        className
+        "group/bento row-span-1 flex h-full flex-col space-y-4 border border-neutral-200 bg-white p-4 duration-200 dark:border-white/5 dark:bg-black",
+        className,
       )}
     >
-      {header}
-      <div className="group-hover/bento:translate-x-2 transition duration-200">
+      <div
+        className={`${index === 3 || index === 4 ? "h-[12rem]" : "h-[6rem]"}`}
+      >
+        {header}
+      </div>
+      <div className="relative z-50 h-[6rem]">
         {icon}
-        <div className="font-bold text-neutral-600 dark:text-neutral-200 mb-2 mt-2">
+        <div className="mb-2 mt-2 font-bold text-neutral-600 dark:text-neutral-200">
           {title}
         </div>
-        <div className="font-normal text-neutral-600 text-xs dark:text-neutral-300">
+        <div className="text-xs font-normal text-neutral-600 dark:text-neutral-300">
           {description}
         </div>
       </div>
     </div>
-  )
-}
+  );
+};

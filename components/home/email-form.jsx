@@ -28,20 +28,20 @@ export function EmailForm() {
 
   return (
     <div>
-      <div className="w-full flex items-center justify-center space-x-2">
+      <p className="text-center text-neutral-400 mb-2">Join us!</p>
+      <div className="w-full flex items-center justify-center">
+        <div className="flex w-[24rem]">
         <Input
           onKeyUp={(e) => e.code == 'Enter' ? submit() : undefined}
           value={email}
+          className="h-8"
           onChange={(e) => setEmail(e.target.value)}
-          className="max-w-[24rem]"
           placeholder="Enter your school email.."
         />
         <Button
           variant="secondary"
-          disabled={buttonDisabled || email.length < 1}
-          className={`aspect-square p-0.5 transition ${
-            buttonDisabled || email.length < 1 ? "text-opacity-50 cursor-not-allowed" : undefined
-          }`}
+          disabled={buttonDisabled || email.length < 1 || !(email.endsWith("@student.pps.net") || email.endsWith("@pps.net"))}
+          className={`aspect-square p-0.5 h-8 border-l-0`}
           onClick={() => !buttonDisabled && submit()}
         >
           {typeof submissionSuccessful != "string" && submissionSuccessful ? (
@@ -52,6 +52,7 @@ export function EmailForm() {
             <Loading />
           )}
         </Button>
+      </div>
       </div>
       {typeof submissionSuccessful != "string" ? (
         submissionSuccessful === false ? (

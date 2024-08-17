@@ -43,7 +43,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${GeistSans.className} bg-neutral-200 dark:bg-neutral-950 overflow-x-hidden`}
+        className={`${GeistSans.className} bg-neutral-50 dark:bg-neutral-950 overflow-x-hidden`}
       >
         <ThemeProvider
           attribute="class"
@@ -52,8 +52,8 @@ export default function RootLayout({ children }) {
           disableTransitionOnChange
         >
           <Navbar />
-
           <main>{children}</main>
+          
         </ThemeProvider>
       </body>
     </html>

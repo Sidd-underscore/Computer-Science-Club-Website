@@ -30,7 +30,7 @@ export const CardStack = ({ items, offset, scaleFactor }) => {
         return (
           <motion.div
             key={card.id}
-            className="absolute backdrop-blur-sm flex h-48 w-full flex-col justify-between rounded-xl border border-neutral-200 bg-white/50 p-4 shadow-xl  dark:border-neutral-700/[0.5] dark:bg-neutral-900/50 md:h-48"
+            className="absolute backdrop-blur-sm flex h-48 w-full flex-col justify-between  border border-neutral-200 bg-white/50 p-4 shadow-xl  dark:border-neutral-700/[0.5] dark:bg-neutral-900/50 md:h-48"
             style={{
               transformOrigin: "top center",
             }}
