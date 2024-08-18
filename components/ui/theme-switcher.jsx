@@ -24,7 +24,7 @@ export function ThemeSwitcher({className}) {
           <span className="sr-only">Toggle theme</span>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent sideOffset={10} className="-mr-0.5" align="end">
+      <DropdownMenuContent sideOffset={8} className="lg:-mr-0.5" align="end">
         <DropdownMenuItem className="" onClick={() => setTheme("light")}>
           <code className="mr-2 tracking-[-0.1em]">:(</code> {" "} light
         </DropdownMenuItem>

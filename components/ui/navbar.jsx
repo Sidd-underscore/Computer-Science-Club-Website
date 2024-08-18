@@ -34,12 +34,12 @@ export function Navbar() {
 
   return (
     <motion.div
-    className={`sticky z-20 md:top-4 flex w-screen justify-center pt-4`}
+    className={`sticky z-20 md:top-4 flex justify-center lg:pt-4`}
     initial={{ top: "-10%" }}
     animate={controls}
     transition={{ type: "spring", duration: 0.5, bounce: 0.25 }}
   >
-      <nav className="flex w-full max-w-4xl items-center justify-between border-2 border-neutral-200 bg-neutral-50 text-sm backdrop-blur-md dark:border-neutral-800 dark:bg-neutral-900">
+      <nav className="flex w-full lg:max-w-4xl items-center justify-between border-2 border-neutral-200 bg-neutral-50 text-sm backdrop-blur-md dark:border-neutral-800 dark:bg-neutral-900">
         <Link
           href="/about"
           className="pl-4 text-neutral-600 hover:text-neutral-600 dark:hover:text-neutral-500 hover:dark:!text-neutral-300"

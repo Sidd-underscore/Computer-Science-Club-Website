@@ -18,6 +18,7 @@ import {
   PersonIcon,
 } from "@radix-ui/react-icons";
 import { motion } from "framer-motion";
+import { useIsMobile } from "@/lib/utils";
 
 const Skeleton = () => (
   <div className="flex h-full min-h-[6rem] w-full flex-1 bg-gradient-to-bl from-neutral-200 to-neutral-100 dark:from-neutral-900 dark:to-neutral-800" />
@@ -78,6 +79,10 @@ function OpenCollaboration() {
 }
 
 function Education() {
+  const isMobile = useIsMobile();
+
+  console.log(isMobile);
+
   const first = {
     initial: {
       x: 20,
@@ -98,12 +103,14 @@ function Education() {
       rotate: 0,
     },
   };
+  
   return (
     <motion.div
-      initial="initial"
+      initial={isMobile ? "hover" : "initial"}
+      key={isMobile}
       animate="animate"
       whileHover="hover"
-      className="h-[12rem] w-full flex-row space-x-2 space-y-2 p-2 md:flex md:flex-1 md:space-y-0"
+      className="h-[12rem] w-full flex-row p-2 flex flex-1 space-x-2 space-y-0 overflow-x-auto" 
     >
       <motion.div
         variants={first}
@@ -168,7 +175,7 @@ function Diversity() {
         repeatType: "reverse",
       }}
       whileHover="hover"
-      className="flex h-full w-full flex-1 flex-col  space-y-2 bg-dot-black/[0.2] dark:bg-dot-white/[0.2]"
+      className="bg-dot-black/[0.2] dark:bg-dot-white/[0.2] flex h-full w-full  flex-1 flex-col space-y-2"
       style={{
         background: "linear-gradient(-45deg,#ee7752,#e73c7e,#23a6d5,#23d5ab)",
         backgroundSize: "400% 400%",
@@ -178,7 +185,7 @@ function Diversity() {
         initial="initial"
         animate="animate"
         variants={variants}
-        className="flex h-full w-full flex-1 flex-col  space-y-2 bg-dot-black/[0.2] dark:bg-dot-white/[0.5]"
+        className="bg-dot-black/[0.2] dark:bg-dot-white/[0.5] flex h-full w-full  flex-1 flex-col space-y-2"
       >
         <motion.div className="h-full w-full "></motion.div>
       </motion.div>

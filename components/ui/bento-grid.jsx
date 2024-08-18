@@ -33,7 +33,7 @@ export const BentoGridItem = ({
       >
         {header}
       </div>
-      <div className="relative z-50 h-[6rem]">
+      <div className="relative z-50">
         {icon}
         <div className="mb-2 mt-2 font-bold text-neutral-600 dark:text-neutral-200">
           {title}

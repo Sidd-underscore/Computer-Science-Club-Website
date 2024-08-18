@@ -14,7 +14,7 @@ export const metadata = {
       process.env.NODE_ENV === "production"
         ? "https://lhs-lcsa-web.vercel.app/"
         : "http://localhost:3000"
-    }`
+    }`,
   ),
   description:
     "The official website of Lincoln's one and only Computer Science Association. ",
@@ -43,7 +43,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${GeistSans.className} bg-neutral-50 dark:bg-neutral-950 overflow-x-hidden`}
+        className={`${GeistSans.className} bg-neutral-50 dark:bg-neutral-950`}
       >
         <ThemeProvider
           attribute="class"
@@ -52,8 +52,11 @@ export default function RootLayout({ children }) {
           disableTransitionOnChange
         >
           <Navbar />
-          <main>{children}</main>
-          
+          <main>
+            <div className="relative z-10 mx-auto lg:max-w-4xl px-2.5 pb-2.5 pt-28 antialiased md:pb-4">
+              {children}
+            </div>
+          </main>
         </ThemeProvider>
       </body>
     </html>
