@@ -47,7 +47,7 @@ export const CardStack = ({ items, offset, scaleFactor }) => {
             </div>
             <div>
               <p className="font-medium text-neutral-500 dark:text-white">
-                {card.name}
+                {card.name} • <span className="text-sm text-neutral-400">{card.username} on Discord</span>
               </p>
               <p className="text-sm font-normal text-neutral-400 dark:text-neutral-300">
                 {card.designation}
