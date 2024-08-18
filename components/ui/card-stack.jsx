@@ -14,6 +14,7 @@ export const CardStack = ({ items, offset, scaleFactor }) => {
 
     return () => clearInterval(interval);
   }, []);
+
   const startFlipping = () => {
     interval = setInterval(() => {
       setCards((prevCards) => {
@@ -21,7 +22,7 @@ export const CardStack = ({ items, offset, scaleFactor }) => {
         newArray.unshift(newArray.pop()); // move the last element to the front
         return newArray;
       });
-    }, 5000);
+    }, 7500);
   };
 
   return (
@@ -30,10 +31,11 @@ export const CardStack = ({ items, offset, scaleFactor }) => {
         return (
           <motion.div
             key={card.id}
-            className="absolute backdrop-blur-sm flex h-48 w-full flex-col justify-between  border border-neutral-200 bg-white/50 p-4 shadow-xl  dark:border-neutral-700/[0.5] dark:bg-neutral-900/50 md:h-48"
+            className="absolute flex h-48 w-full flex-col justify-between border border-neutral-200 bg-white p-4 shadow-xl dark:border-neutral-700 dark:bg-neutral-900 md:h-48"
             style={{
               transformOrigin: "top center",
             }}
+            transition={{duration: 0.5}}
             animate={{
               top: index * -CARD_OFFSET,
               scale: 1 - index * SCALE_FACTOR, // decrease scale for cards that are behind

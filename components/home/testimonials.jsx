@@ -8,7 +8,27 @@ const testimonials = [
     name: "Sidd",
     designation: "Joined Freshman year",
   },
-  // ... more soon
+  {
+    id: 1,
+    content:
+      "My favorite part about LCSA is how active the community is.",
+    name: "Edwin",
+    designation: "Joined Freshman year",
+  },
+  {
+    id: 2,
+    content:
+      "When I first joined in April 2023 the community was nothing but accepting, I was immediately adopted into the community and integrated into the social culture. In between that and the help with coding LCSA has been an amazing place for me to hone my coding skills and expand my circles.",
+    name: "Eliza",
+    designation: "Joined Freshman year",
+  },
+  {
+    id: 3,
+    content:
+      "I feel welcomed and included by the community, which is very friendly and I don't feel afraid to voice my opinions and ideas.",
+    name: "Jacob",
+    designation: "Joined Freshman year",
+  },
 ];
 
 export default function Testimonials() {
