@@ -12,7 +12,7 @@ export default function TinlingPage() {
           width={1000}
           height={1000}
         />{" "}
-        Tinling
+        The Tinling
       </h1>
       <hr className="my-10  border-neutral-400 dark:border-neutral-700" />
       <div className="flex items-center justify-center">
